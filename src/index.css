@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Oxygen:wght@400;700&display=swap');
+
+* {
+  font-family: "Kanit", sans-serif;
+  background-color: #07272d;                                              
+}
+
+
+/* NAVBAR */
+
+.underline-animation {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ffb600;
+  transition: width 0.5s ease-in-out;
+}
+
+.relative:hover .underline-animation {
+  width: 100%;
+}
+
+.text-white {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+.text-white:hover {
+  color: #ffb600;
+}
