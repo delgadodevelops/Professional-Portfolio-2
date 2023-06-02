@@ -40,3 +40,19 @@
 .text-home {
   color: #ffb600;
 }
+
+/* About me */
+
+.custom-container {
+  max-width: 800px; /* Adjust the value as per your preference */
+}
+
+@keyframes load-progress {
+  0% {
+    width: 0%;
+  }
+}
+
+.animate-progress {
+  animation: load-progress 2s ease-in-out forwards;
+}
