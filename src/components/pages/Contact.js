@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AiOutlineUser, AiOutlineMail, AiOutlineMessage } from 'react-icons/ai';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -25,49 +26,58 @@ const Contact = () => {
       setName('');
       setEmail('');
       setMessage('');
+
+      // Display success alert
+      alert('Email sent successfully!');
     } catch (error) {
       console.error('Email sending failed:', error);
+
+      // Display error alert
+      alert('Email sending failed, please try again.');
     }
   };
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
-        <h1 className="bg-white text-2xl font-bold mb-4">Contact Page</h1>
-        <form onSubmit={handleSubmit} className="bg-white">
-          <div className="bg-white mb-4">
-            <label htmlFor="name" className="bg-white block text-gray-700 font-bold mb-2">
+      <div className="max-w-3xl w-full p-6 bg-custom-bluee rounded-lg shadow-lg">
+        <h1 className="text-custom-orange bg-custom-bluee text-2xl font-bold mb-4">Contact Page</h1>
+        <form onSubmit={handleSubmit} className="bg-custom-bluee">
+          <div className="bg-custom-bluee mb-4">
+            <label htmlFor="name" className="bg-custom-bluee block text-white font-bold mb-2">
+              <AiOutlineUser className="bg-custom-bluee inline-block mr-2 mb-1" />
               Name
             </label>
             <input
               type="text"
               id="name"
-              className="bg-white border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
+              className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
-          <div className="bg-white mb-4">
-            <label htmlFor="email" className="bg-white block text-gray-700 font-bold mb-2">
+          <div className="bg-custom-bluee mb-4">
+            <label htmlFor="email" className="bg-custom-bluee block text-white font-bold mb-2">
+              <AiOutlineMail className="bg-custom-bluee inline-block mr-2 mb-1" />
               Email Address
             </label>
             <input
               type="email"
               id="email"
-              className="bg-white border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
+              className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="bg-white mb-4">
-            <label htmlFor="message" className="bg-white block text-gray-700 font-bold mb-2">
+          <div className="bg-custom-bluee mb-4">
+            <label htmlFor="message" className="bg-custom-bluee block text-white font-bold mb-2">
+              <AiOutlineMessage className="bg-custom-bluee inline-block mr-2 mb-1" />
               Message
             </label>
             <textarea
               id="message"
-              className="bg-white border border-gray-300 rounded-md p-2 w-full h-32 resize-none focus:outline-none focus:border-blue-500"
+              className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full h-32 resize-none focus:outline-none focus:border-blue-500"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
@@ -75,7 +85,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-custom-orange hover:opacity-50 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Submit
           </button>
