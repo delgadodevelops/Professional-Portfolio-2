@@ -30,9 +30,9 @@ const About = () => {
         {skills.map((skill, index) => (
           <div key={index} className="mb-4">
             <h3 className="text-white text-lg font-bold">{skill.language}</h3>
-            <div className="bg-gray-300 h-4 rounded overflow-hidden">
+            <div className="bg-custom-bluee h-4 rounded overflow-hidden">
               <div
-                className={`bg-blue-500 h-4 rounded ${animationStarted ? 'animate-progress' : ''}`}
+                className={`bg-blue-300 h-4 rounded ${animationStarted ? 'animate-progress' : ''}`}
                 style={{ width: `${skill.proficiency}%` }}
               ></div>
             </div>

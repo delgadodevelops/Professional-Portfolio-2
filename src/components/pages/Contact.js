@@ -3,36 +3,33 @@ import { AiOutlineUser, AiOutlineMail, AiOutlineMessage } from 'react-icons/ai';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Prepare the email parameters
+      const { name, email, message } = formData;
+
       const templateParams = {
         from_name: name,
         from_email: email,
         message: message
       };
 
-      // Send the email using EmailJS
-      const response = await emailjs.send('service_4yiqpv5', 'template_7p2deo2', templateParams, 'EfGTdTFgjfpRrAh7I');
+      const response = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
       console.log('Email sent successfully!', response.status, response.text);
 
-      // Clear form fields after successful submission
-      setName('');
-      setEmail('');
-      setMessage('');
+      setFormData({ name: '', email: '', message: '' });
 
-      // Display success alert
       alert('Email sent successfully!');
     } catch (error) {
       console.error('Email sending failed:', error);
-
-      // Display error alert
       alert('Email sending failed, please try again.');
     }
   };
@@ -51,8 +48,9 @@ const Contact = () => {
               type="text"
               id="name"
               className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               required
             />
           </div>
@@ -65,8 +63,9 @@ const Contact = () => {
               type="email"
               id="email"
               className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
           </div>
@@ -78,8 +77,9 @@ const Contact = () => {
             <textarea
               id="message"
               className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full h-32 resize-none focus:outline-none focus:border-blue-500"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               required
             ></textarea>
           </div>
