@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
-import { AiOutlineUser, AiOutlineMail, AiOutlineMessage } from 'react-icons/ai';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    if (name === 'name') setName(value);
+    if (name === 'email') setEmail(value);
+    if (name === 'message') setMessage(value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const { name, email, message } = formData;
-
       const templateParams = {
-        from_name: name,
-        from_email: email,
         message: message
       };
 
       const response = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
       console.log('Email sent successfully!', response.status, response.text);
 
-      setFormData({ name: '', email: '', message: '' });
+      setName('');
+      setEmail('');
+      setMessage('');
 
       alert('Email sent successfully!');
     } catch (error) {
@@ -41,7 +42,6 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className="bg-custom-bluee">
           <div className="bg-custom-bluee mb-4">
             <label htmlFor="name" className="bg-custom-bluee block text-white font-bold mb-2">
-              <AiOutlineUser className="bg-custom-bluee inline-block mr-2 mb-1" />
               Name
             </label>
             <input
@@ -49,14 +49,13 @@ const Contact = () => {
               id="name"
               className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
               name="name"
-              value={formData.name}
+              value={name}
               onChange={handleChange}
               required
             />
           </div>
           <div className="bg-custom-bluee mb-4">
             <label htmlFor="email" className="bg-custom-bluee block text-white font-bold mb-2">
-              <AiOutlineMail className="bg-custom-bluee inline-block mr-2 mb-1" />
               Email Address
             </label>
             <input
@@ -64,21 +63,20 @@ const Contact = () => {
               id="email"
               className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
               name="email"
-              value={formData.email}
+              value={email}
               onChange={handleChange}
               required
             />
           </div>
           <div className="bg-custom-bluee mb-4">
             <label htmlFor="message" className="bg-custom-bluee block text-white font-bold mb-2">
-              <AiOutlineMessage className="bg-custom-bluee inline-block mr-2 mb-1" />
               Message
             </label>
             <textarea
               id="message"
               className="text-white bg-custom-bluee border border-custom-orange rounded-md p-2 w-full h-32 resize-none focus:outline-none focus:border-blue-500"
               name="message"
-              value={formData.message}
+              value={message}
               onChange={handleChange}
               required
             ></textarea>
@@ -96,3 +94,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
