@@ -21,7 +21,7 @@ const Contact = () => {
         message: message
       };
 
-      const response = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
+      const response = await emailjs.send('service_4yiqpv5', 'template_7p2deo2', templateParams, 'EfGTdTFgjfpRrAh7I');
       console.log('Email sent successfully!', response.status, response.text);
 
       setName('');
