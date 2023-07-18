@@ -55,3 +55,6 @@
 .animate-progress {
   animation: load-progress 2s ease-in-out forwards;
 }
+
+/* Media Queries */
+

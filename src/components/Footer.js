@@ -12,7 +12,7 @@ const Footer = () => {
         <a href="https://www.linkedin.com/in/david-delgado-02160619a/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="text-white text-xl hover:text-gray-500" />
         </a>
-        <a href="https://github.com/ddelgado25" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/delgadodevelops" target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-white text-xl hover:text-gray-500" />
         </a>
         <a href="#" onClick={handleEmailClick}>
