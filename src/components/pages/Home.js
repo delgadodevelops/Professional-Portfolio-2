@@ -39,7 +39,7 @@ const Home = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-home text-4xl md:text-7xl font-bold mb-3 mt-4">Hi, I'm David Delgado</h1>
-            <p className="text-white text-lg md:text-4xl mb-4 " ref={textRef}></p>
+            <p className="text-white text-2xl md:text-4xl mb-4 " ref={textRef}></p>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-center">
