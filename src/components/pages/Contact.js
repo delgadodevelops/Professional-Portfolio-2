@@ -18,6 +18,8 @@ const Contact = () => {
 
     try {
       const templateParams = {
+        from_name: name,
+        from_email: email,
         message: message
       };
 
