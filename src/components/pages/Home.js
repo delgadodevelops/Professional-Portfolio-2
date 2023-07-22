@@ -45,7 +45,7 @@ const Home = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <img
             className="object-cover max-w-full h-auto mb-12"
-            src="./images/portfolio-photo.png"
+            src="./images/portfolio-photo-updated.png"
             alt="Portrait"
           />
         </div>
