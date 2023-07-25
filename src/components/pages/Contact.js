@@ -35,7 +35,7 @@ const Contact = () => {
 
       setTimeout(() => {
         setToastVisibility(false);
-      }, 3000); 
+      }, 3000);
 
     } catch (error) {
       console.error('Email sending failed:', error);
@@ -45,50 +45,52 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="flex w-full max-w-7xl">
-        <div className="w-3/5 pr-40">
-          <img src="./images/contact-photo.png" alt="Contact Photo" className="max-w-full h-auto" />
+    <div className="min-h-screen flex flex-col justify-center items-center">
+      <div className="max-w-7xl mx-auto px-4 md:flex items-center">
+        {/* Contact Photo */}
+        <div className="md:w-1/2 mb-4 md:mb-0">
+          <img src="./images/contact-photo.png" alt="Contact Photo" className="max-w-full h-auto mx-auto md:max-w-md" />
         </div>
-        <div className="w-2/5 p-6 bg-custom-blue rounded-lg ">
-          <h1 className="text-custom-orange text-4xl font-bold mb-4">Contact Page //</h1>
-          <form onSubmit={handleSubmit} className="bg-custom-blue">
-            <p className="text-white mb-8">Want to get in touch with me? Please fill out the form below and I will get back to you as soon as I can. Thank you. </p>
-            <div className="bg-custom-blue mb-4">
-              <label htmlFor="name" className="block text-white mb-2">
+        {/* Contact Form */}
+        <div className="md:w-1/2 md:ml-8">
+          <h1 className="text-custom-orange text-4xl font-bold px-8 pt-6 mb-2">Contact Page //</h1>
+          <form onSubmit={handleSubmit} className="text-white px-8 pt-6 pb-8 ">
+            <p className="mb-6">Want to get in touch with me? Please fill out the form below and I will get back to you as soon as I can. Thank you.</p>
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-white font-bold mb-2">
                 Name
               </label>
               <input
                 type="text"
                 id="name"
-                className="text-white bg-custom-blue border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
+                className=" border border-custom-orange rounded w-full py-2 px-3 text-white  focus:outline-none focus:shadow-outline"
                 name="name"
                 value={name}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="bg-custom-blue mb-4">
-              <label htmlFor="email" className="block text-white mb-2">
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-white font-bold mb-2">
                 Email Address
               </label>
               <input
                 type="email"
                 id="email"
-                className="text-white bg-custom-blue border border-custom-orange rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
+                className=" border border-custom-orange rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                 name="email"
                 value={email}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="bg-custom-blue mb-4">
-              <label htmlFor="message" className="block text-white mb-2">
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-white font-bold mb-2">
                 Message
               </label>
               <textarea
                 id="message"
-                className="text-white bg-custom-blue border border-custom-orange rounded-md p-2 w-full h-32 resize-none focus:outline-none focus:border-blue-500"
+                className=" border border-custom-orange rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                 name="message"
                 value={message}
                 onChange={handleChange}
@@ -98,17 +100,27 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full max-w-xs bg-custom-orange hover:opacity-50 text-white py-2 px-4 mb-5 rounded focus:outline-none focus:shadow-outline"
+              className="group relative bg-custom-blue border border-custom-orange hover:bg-orange-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline overflow-hidden"
             >
-              Send Message
+              <div className="absolute inset-0 w-2 bg-amber-400 transition-all duration-250 ease-out group-hover:w-full"></div>
+              <span className="bg-transparent relative group-hover:text-white">Send Message</span>
             </button>
           </form>
           {isToastVisible && (
-            <div id="toast-simple" className="flex items-center w-full max-w-xs p-4 space-x-4   divide-x divide-gray-200 rounded-lg shadow text-gray-400  space-x bg-custom-bluee" role="alert">
-              <svg className="bg-custom-bluee w-5 h-5 text-green-500 rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"/>
-              </svg>
-              <div className="bg-custom-bluee pl-4 text-sm font-normal">Message sent successfully.</div>
+            <div className="max-w-7xl mx-auto px-6 md:flex items-center">
+              <div className="bg-green-500 text-white rounded-lg shadow-md flex items-center px-4 py-4 w-full">
+                <svg
+                  className="bg-transparent w-6 h-6 mr-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 "
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div className="bg-transparent flex-1">Message sent successfully.</div>
+              </div>
             </div>
           )}
         </div>
