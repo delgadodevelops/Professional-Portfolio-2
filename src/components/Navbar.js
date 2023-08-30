@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-4 drop-shadow-md">
+    <nav className="flex items-center justify-between p-4 drop-shadow-md sticky top-0 z-10">
       <div>
         <Link to="/" className="flex items-center text-nav">
           <span className="text-xl font-bold  ml-10">DELGADO DEVELOPS</span>
