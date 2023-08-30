@@ -23,14 +23,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-4 text-nav">
+    <nav className="flex items-center justify-between p-4 drop-shadow-md">
       <div>
-        <Link to="/" className="flex items-center">
-          <img
-            src={isMobile ? "./images/dd-logo.png" : "./images/DAVID-DELGADO-NAV-LOGO-UPDATED.png"}
-            alt="Logo"
-            className="h-8 w-auto mr-2" // Adjust the height and width of the logo as needed
-          />
+        <Link to="/" className="flex items-center text-nav">
+          <span className="text-xl font-bold  ml-10">DELGADO DEVELOPS</span>
         </Link>
       </div>
       <div className="flex space-x-14 md:hidden">
@@ -62,19 +58,19 @@ const Navbar = () => {
               <div className="py-1">
                 <Link
                   to="/about"
-                  className="block px-4 py-2 text-nav hover:bg-custom-orange hover:text-lg"
+                  className="block px-4 py-2 text-nav  hover:text-lg"
                 >
                   About
                 </Link>
                 <Link
                   to="/projects"
-                  className="block px-4 py-2 text-nav hover:bg-custom-orange hover:text-lg"
+                  className="block px-4 py-2 text-nav  hover:text-lg"
                 >
                   Projects
                 </Link>
                 <Link
                   to="/contact"
-                  className="block px-4 py-2 text-nav hover:bg-custom-orange hover:text-lg"
+                  className="block px-4 py-2 text-nav  hover:text-lg"
                 >
                   Contact
                 </Link>
