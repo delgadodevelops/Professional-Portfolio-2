@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/pages/Home';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Element } from 'react-scroll';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Preloader from './components/preloader';
+import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Projects from './components/pages/Projects';
 import Contact from './components/pages/Contact';
-import Preloader from './components/preloader';
+import Skills from './components/pages/Skills';
 import './App.css';
 
 const App = () => {
@@ -26,12 +28,23 @@ const App = () => {
       ) : (
         <div className="fade-in-container">
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <div className="content">
+            <Element name="home">
+              <Home />
+            </Element>
+            <Element name="about">
+              <About />
+            </Element>
+            <Element name="skills">
+              <Skills />
+            </Element>
+            <Element name="projects">
+              <Projects />
+            </Element>
+            <Element name="contact">
+              <Contact />
+            </Element>
+          </div>
           <Footer />
         </div>
       )}

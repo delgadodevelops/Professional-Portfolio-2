@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,8 +25,8 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between p-4 drop-shadow-md sticky top-0 z-10">
       <div>
-        <Link to="/" className="flex items-center text-nav">
-          <span className="text-xl font-bold  ml-10">DELGADO DEVELOPS</span>
+        <Link to="home" smooth={true} duration={500} className="flex items-center text-nav">
+          <span className="text-xl font-bold ml-10">DELGADO DEVELOPS</span>
         </Link>
       </div>
       <div className="flex space-x-14 md:hidden">
@@ -57,20 +57,34 @@ const Navbar = () => {
             <div className="absolute top-0 right-0 mt-10 w-48 bg-white rounded-lg shadow-lg">
               <div className="py-1">
                 <Link
-                  to="/about"
-                  className="block px-4 py-2 text-nav  hover:text-lg"
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  className="block px-4 py-2 text-nav hover:text-lg"
                 >
                   About
                 </Link>
                 <Link
-                  to="/projects"
-                  className="block px-4 py-2 text-nav  hover:text-lg"
+                  to="skills"
+                  smooth={true}
+                  duration={500}
+                  className="block px-4 py-2 text-nav hover:text-lg"
+                >
+                  Skills
+                </Link>
+                <Link
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  className="block px-4 py-2 text-nav hover:text-lg"
                 >
                   Projects
                 </Link>
                 <Link
-                  to="/contact"
-                  className="block px-4 py-2 text-nav  hover:text-lg"
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  className="block px-4 py-2 text-nav hover:text-lg"
                 >
                   Contact
                 </Link>
@@ -90,13 +104,16 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex space-x-14">
         {/* Desktop Menu */}
-        <Link to="/about" className="text-nav mt-2">
+        <Link to="about" smooth={true} duration={500} className="text-nav mt-2">
           About
         </Link>
-        <Link to="/projects" className="text-nav mt-2">
+        <Link to="skills" smooth={true} duration={500} className="text-nav mt-2">
+          Skills
+        </Link>
+        <Link to="projects" smooth={true} duration={500} className="text-nav mt-2">
           Projects
         </Link>
-        <Link to="/contact" className="text-nav mt-2">
+        <Link to="contact" smooth={true} duration={500} className="text-nav mt-2">
           Contact
         </Link>
         {!isMobile && (
