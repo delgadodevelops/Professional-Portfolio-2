@@ -5,7 +5,19 @@
 
 * {
   font-family: "Kanit", sans-serif;
-  background-color: #07272d;                                              
+  background-color: #07272d;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}                                              
+
+.container {
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+div {
+  display: block;
 }
 
 /* NAVBAR */
