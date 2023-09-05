@@ -37,10 +37,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home h-auto relative lg:flex lg:flex-col lg:w-full lg:h-screen">
-      <div className="container mx-auto px-5 py-10 sm:py-6">
+    <div className="home h-auto lg:flex lg:flex-col lg:w-full lg:h-screen">
+      <div className="container mx-auto px-8 p-10 sm:py-6">
         <div className="content flex-col text-center gap-14 h-auto 2xl:mt-24 ">
-          <div className="hero-main flex-col-rev text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
+          <div className="hero-main  text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
             <div className="hero-img h-80 w-80 sm:h-108 sm:w-108 xl:h-120 xl:w-120 sm:relative flex items-center justify-center">
               <img
                 className="mx-auto"
@@ -49,11 +49,11 @@ const Home = () => {
               />
             </div>
             <div className="hero-text flex flex-col max-w-screen-md relative">
-              <h1 className="text-4xl sm:text-5xl xl:text-6xl lg:leading-11 mb-5 mt-5 font-semibold text-custom-orange">
+              <h1 className="text-4xl sm:text-5xl xl:text-7xl lg:leading-11 mb-5 mt-5 font-semibold text-custom-orange">
                 Front-End React Developer
               </h1>
               <p
-                className="text-xl sm:text-2xl xl:text-3xl font-medium leading-8 mb-5 text-white"
+                className="text-xl sm:text-2xl xl:text-3xl font-light leading-8 mb-5 text-white"
                 ref={textRef}
               ></p>
               <span className="flex justify-center gap-4 mb-8 mt-4">
