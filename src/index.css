@@ -9,12 +9,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}                                              
+}
 
-.container {
+/* .container {
   margin: 0 auto;
   padding: 0 4rem;
-}
+} */
 
 div {
   display: block;
@@ -55,7 +55,8 @@ div {
 /* About me */
 
 .custom-container {
-  max-width: 800px; /* Adjust the value as per your preference */
+  max-width: 800px;
+  /* Adjust the value as per your preference */
 }
 
 @keyframes load-progress {
@@ -69,4 +70,3 @@ div {
 }
 
 /* Media Queries */
-

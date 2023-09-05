@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import React, { useState } from 'react';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -49,7 +49,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 md:flex items-center">
         {/* Contact Photo */}
         <div className="md:w-1/2 mb-4 md:mb-0">
-          <img src="./images/contact-photo.png" alt="Contact Photo" className="max-w-full h-auto mx-auto md:max-w-md" />
+          <img src="./images/contact-photo.png" alt="Portrait shot" className="max-w-full h-auto mx-auto md:max-w-md" />
         </div>
         {/* Contact Form */}
         <div className="md:w-1/2 md:ml-8">

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
-import "../../index.css"
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
+import "../../index.css";
 
 const Home = () => {
   const textRef = useRef(null);
@@ -8,7 +8,9 @@ const Home = () => {
 
   useEffect(() => {
     const options = {
-      strings: ['Hi, My Name is David Delgado. I am a Front-end Developer Out of  Miami, Florida.'],
+      strings: [
+        "Hi, My Name is David Delgado. I am a Front-End Developer Out of  Miami, Florida.🌴",
+      ],
       typeSpeed: 60,
       loop: false,
       showCursor: false,
@@ -16,7 +18,7 @@ const Home = () => {
 
     const typed = new Typed(textRef.current, options);
 
-    const cursorElement = document.querySelector('.typed-cursor');
+    const cursorElement = document.querySelector(".typed-cursor");
     cursorRef.current = cursorElement;
 
     return () => {
@@ -35,44 +37,53 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home flex h-screen realtive w-full mt-20 ">
-      <div className="container ">
-        <div className="content flex items-center justify-center relative h-{65rem} gap-40 ">
-          <div className="hero-main flex items-center gap-40 justify-center relative " >
-            <div className="hero-text flex flex-col max-w-[50rem] relative">
-              <h1 className="text-7xl leading-11 mt-6 mb-6 font-bold block text-custom-orange">Front-End React Developer</h1>
-              <p className="text-2xl font-medium leading-relaxed my-4 mx-0 block text-white" ref={textRef}></p>
-              <span className='cursor-pointer flex gap-5 my-6  '>
+    <div className="home h-auto relative lg:flex lg:flex-col lg:w-full lg:h-screen">
+      <div className="container mx-auto px-5 py-10 sm:py-6">
+        <div className="content flex-col text-center gap-14 h-auto 2xl:mt-24 ">
+          <div className="hero-main flex-col-rev text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
+            <div className="hero-img h-80 w-80 sm:h-108 sm:w-108 xl:h-120 xl:w-120 sm:relative flex items-center justify-center">
+              <img
+                className="mx-auto"
+                src="/images/portfolio-photo-updated.png"
+                alt="Portrait"
+              />
+            </div>
+            <div className="hero-text flex flex-col max-w-screen-md relative">
+              <h1 className="text-4xl sm:text-5xl xl:text-6xl lg:leading-11 mb-5 mt-5 font-semibold text-custom-orange">
+                Front-End React Developer
+              </h1>
+              <p
+                className="text-xl sm:text-2xl xl:text-3xl font-medium leading-8 mb-5 text-white"
+                ref={textRef}
+              ></p>
+              <span className="flex justify-center gap-4 mb-8 mt-4">
                 <a
                   href="https://github.com/delgadodevelops"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-custom-bluee text-white py-2 px-4 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110"
+                  className="flex items-center bg-custom-bluee text-white p-2 rounded-md transition-transform hover:scale-110"
                 >
-                  <span className="mr-2">
-                    <img src="images/github-color.svg" alt="GitHub Icon" className="bg-custom-bluee transition duration-300 w-5 h-5" />
-                  </span>
+                  <img
+                    src="images/github-color.svg"
+                    alt="GitHub Icon"
+                    className="w-5 h-5 mr-2 bg-custom-bluee"
+                  />
                   GitHub
                 </a>
                 <a
                   href="https://www.linkedin.com/in/daviddelgado-/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-custom-bluee text-white py-2 px-4 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110"
+                  className="flex items-center bg-custom-bluee text-white p-2 rounded-md transition-transform hover:scale-110"
                 >
-                  <span className="mr-2">
-                    <img src="images/linkedin-color.svg" alt="LinkedIn Icon" className="bg-custom-bluee transition duration-300 w-5 h-5" />
-                  </span>
-                  Linkedin
+                  <img
+                    src="images/linkedin-color.svg"
+                    alt="LinkedIn Icon"
+                    className="w-5 h-5 mr-2 bg-custom-bluee"
+                  />
+                  LinkedIn
                 </a>
               </span>
-            </div>
-            <div className="hero-img h-[40rem] w-[40rem]">
-              <img
-                className=""
-                src="./images/portfolio-photo-updated.png"
-                alt="Portrait"
-              />
             </div>
           </div>
         </div>
@@ -82,5 +93,3 @@ const Home = () => {
 };
 
 export default Home;
-
-

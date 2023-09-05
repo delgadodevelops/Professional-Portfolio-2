@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Element } from 'react-scroll';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Preloader from './components/preloader';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Projects from './components/pages/Projects';
-import Contact from './components/pages/Contact';
-import Skills from './components/pages/Skills';
 import './App.css';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import Home from './components/pages/Home';
+import Projects from './components/pages/Projects';
+import Skills from './components/pages/Skills';
+import Preloader from './components/preloader';
 
 const App = () => {
   const [loading, setLoading] = useState(true);

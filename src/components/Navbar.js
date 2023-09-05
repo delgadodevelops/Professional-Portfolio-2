@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -11,10 +11,10 @@ const Navbar = () => {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -25,7 +25,12 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between p-5 drop-shadow-md sticky top-0 z-10">
       <div>
-        <Link to="home" smooth={true} duration={500} className="flex items-center text-nav">
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          className="flex items-center text-nav"
+        >
           <span className="text-xl font-bold ml-10">DELGADO DEVELOPS</span>
         </Link>
       </div>
@@ -107,13 +112,28 @@ const Navbar = () => {
         <Link to="about" smooth={true} duration={500} className="text-nav mt-2">
           About
         </Link>
-        <Link to="skills" smooth={true} duration={500} className="text-nav mt-2">
+        <Link
+          to="skills"
+          smooth={true}
+          duration={500}
+          className="text-nav mt-2"
+        >
           Skills
         </Link>
-        <Link to="projects" smooth={true} duration={500} className="text-nav mt-2">
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          className="text-nav mt-2"
+        >
           Projects
         </Link>
-        <Link to="contact" smooth={true} duration={500} className="text-nav mt-2">
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
+          className="text-nav mt-2"
+        >
           Contact
         </Link>
         {!isMobile && (
