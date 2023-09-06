@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-5 drop-shadow-md sticky top-0 z-10">
+    <nav className="bg-custom-blue flex items-center justify-between p-5 drop-shadow-md sticky top-0 z-10">
       <div>
         <Link
           to="home"

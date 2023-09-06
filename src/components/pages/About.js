@@ -1,17 +1,35 @@
+import React from "react";
+import "../../index.css";
 
+const aboutMeText = (
+  <p className="">
+    As a Junior Front-End Developer, I excel in HTML, CSS, JavaScript, React,
+    and Tailwind. I specialize in creating responsive websites with dynamic
+    interfaces. I'm highly collaborative and passionate about astronomy,
+    photography, video games, and computer science. I'm driven, open-minded, and
+    committed to excellence in all my endeavors.
+  </p>
+);
 
 const About = () => {
-
   return (
-    <div className="container mx-auto p-20 custom-container">
-      <h1 className="text-home text-6xl font-bold mb-5">ABOUT ME //</h1>
-      <hr className="text-home border-gray-400 border-t-2 my-6" />
-      <div className="mb-8">
-        <h2 className="text-home text-3xl font-bold mb-5">Passionate </h2>
-        <p className="text-white text-xl">
-          Hi, my name is David Delgado. I am a recently graduated Full-Stack Developer from the University of Miami Coding Bootcamp. I am fluent in HTML/CSS, JavaScript, mySQL, MongoDB, Express, React, and Node. My real passion comes in the design and UI aspect of applications. I am very well versed in TailwindCSS and have been using it to style my most recent applications, including this one.
+    <div className="bg-gradient-to-b from-custom-bluee to-custom-blue min-h-screen flex flex-col items-center justify-center">
+      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8">
+        <img
+          src="images/coding-img.png" // Replace with the URL or path to your photo
+          alt="Your Name" // Replace with an appropriate alt text for your photo
+          className=" h-30 w-30 mb-4" // Adjust the size and styling as needed
+        />
+        <h1 className="text-3xl text-center font-semibold italic mb-6">
+          <span className="text-custom-orange">PASSIONATE</span>{" "}
+          <span className="text-white">FRONT-END</span>{" "}
+          <span className="text-custom-orange">REACT</span>{" "}
+          <span className="text-white">DEVELOPER</span>
+        </h1>
+        <p className="text-gray-600 text-center text-sm leading-7">
+          {aboutMeText}
         </p>
-      </div>>
+      </div>
     </div>
   );
 };

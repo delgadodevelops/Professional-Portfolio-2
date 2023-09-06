@@ -11,12 +11,6 @@
   padding: 0;
 }
 
-/* 
-.container {
-  margin: 0 auto;
-  padding: 0 2rem;
-} */
-
 div {
   display: block;
 }
@@ -70,4 +64,8 @@ div {
   animation: load-progress 2s ease-in-out forwards;
 }
 
-/* Media Queries */
+/* About.js */
+
+.background-image {
+  background-image: url(../public/images/bg-half.png);
+}
