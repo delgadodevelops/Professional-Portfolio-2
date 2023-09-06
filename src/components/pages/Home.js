@@ -40,10 +40,10 @@ const Home = () => {
     <div className="home h-auto lg:flex lg:flex-col lg:w-full lg:h-screen">
       <div className="container mx-auto px-8 p-10 sm:py-6">
         <div className="content flex-col text-center gap-14 h-auto 2xl:mt-24 ">
-          <div className="hero-main  text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
-            <div className="hero-img h-80 w-80 sm:h-108 sm:w-108 xl:h-120 xl:w-120 sm:relative flex items-center justify-center">
+          <div className="hero-main text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
+            <div className="hero-img h-80 w-80 sm:h-108 sm:w-108 xl:h-120 xl:w-120 sm:relative mx-auto text-center">
               <img
-                className="mx-auto"
+                className=""
                 src="/images/portfolio-photo-updated.png"
                 alt="Portrait"
               />
