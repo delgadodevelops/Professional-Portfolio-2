@@ -60,7 +60,7 @@ const Navbar = () => {
           </label>
           {isMenuOpen && (
             <div className="absolute top-0 right-0 mt-10 w-48 bg-white rounded-lg shadow-lg">
-              <div className="py-1">
+              <div className="p-2 bg-custom-blue">
                 <Link
                   to="about"
                   smooth={true}

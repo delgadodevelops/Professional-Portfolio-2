@@ -37,7 +37,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home bg-custom-blue h-auto lg:flex lg:flex-col lg:w-full lg:h-screen">
+    <div className="home bg-gradient-to-b from-custom-blue to-custom-bluee h-auto lg:flex lg:flex-col lg:w-full lg:h-screen">
       <div className="container mx-auto px-8 p-10 sm:py-6">
         <div className="content flex-col text-center gap-14 h-auto 2xl:mt-24 ">
           <div className="hero-main text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
@@ -61,12 +61,12 @@ const Home = () => {
                   href="https://github.com/delgadodevelops"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center bg-custom-bluee text-white p-2 rounded-md transition-transform hover:scale-110"
+                  className="flex items-center bg-custom-orange text-white p-2 rounded-md transition-transform hover:scale-110"
                 >
                   <img
                     src="images/github-color.svg"
                     alt="GitHub Icon"
-                    className="w-5 h-5 mr-2 bg-custom-bluee"
+                    className="w-5 h-5 mr-2 bg-custom-orange"
                   />
                   GitHub
                 </a>
@@ -74,12 +74,12 @@ const Home = () => {
                   href="https://www.linkedin.com/in/daviddelgado-/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center bg-custom-bluee text-white p-2 rounded-md transition-transform hover:scale-110"
+                  className="flex items-center bg-custom-orange text-white p-2 rounded-md transition-transform hover:scale-110"
                 >
                   <img
                     src="images/linkedin-color.svg"
                     alt="LinkedIn Icon"
-                    className="w-5 h-5 mr-2 bg-custom-bluee"
+                    className="w-5 h-5 mr-2 bg-custom-orange"
                   />
                   LinkedIn
                 </a>

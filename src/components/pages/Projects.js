@@ -30,7 +30,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       <h1 className="text-home text-6xl font-bold mb-10">MY PROJECTS //</h1>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mt-5">

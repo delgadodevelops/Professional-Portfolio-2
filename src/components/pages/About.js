@@ -5,7 +5,7 @@ const aboutMeText = (
   <p className="">
     As a Junior Front-End Developer, I excel in HTML, CSS, JavaScript, React,
     and Tailwind. I specialize in creating responsive websites with dynamic
-    interfaces. I'm highly collaborative and passionate about astronomy,
+    interfaces. I'm highly collaborative and passionate about sports,
     photography, video games, and computer science. I'm driven, open-minded, and
     committed to excellence in all my endeavors.
   </p>
@@ -16,14 +16,11 @@ const About = () => {
     <div className="bg-gradient-to-b from-custom-bluee to-custom-blue min-h-screen flex flex-col items-center justify-center">
       <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 xl:p-10 xl:m-40 flex flex-col items-center">
         <div className="flex flex-col lg:flex-row items-center">
-          {/* Image on the left for lg screens */}
           <img
             src="images/coding-img.png"
             alt="Your Name"
             className="mb-4 w-64 sm:w-96 xl:w-120"
           />
-
-
           <div className="text-center lg:text-left lg:pl-8">
             <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold italic mb-6">
               <span className="text-custom-orange">PASSIONATE</span>{" "}
