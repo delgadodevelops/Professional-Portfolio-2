@@ -14,21 +14,28 @@ const aboutMeText = (
 const About = () => {
   return (
     <div className="bg-gradient-to-b from-custom-bluee to-custom-blue min-h-screen flex flex-col items-center justify-center">
-      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8">
-        <img
-          src="images/coding-img.png" // Replace with the URL or path to your photo
-          alt="Your Name" // Replace with an appropriate alt text for your photo
-          className=" h-30 w-30 mb-4" // Adjust the size and styling as needed
-        />
-        <h1 className="text-3xl text-center font-semibold italic mb-6">
-          <span className="text-custom-orange">PASSIONATE</span>{" "}
-          <span className="text-white">FRONT-END</span>{" "}
-          <span className="text-custom-orange">REACT</span>{" "}
-          <span className="text-white">DEVELOPER</span>
-        </h1>
-        <p className="text-gray-600 text-center text-sm leading-7">
-          {aboutMeText}
-        </p>
+      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 xl:p-10 xl:m-40 flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row items-center">
+          {/* Image on the left for lg screens */}
+          <img
+            src="images/coding-img.png"
+            alt="Your Name"
+            className="mb-4 w-64 sm:w-96 xl:w-120"
+          />
+
+
+          <div className="text-center lg:text-left lg:pl-8">
+            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold italic mb-6">
+              <span className="text-custom-orange">PASSIONATE</span>{" "}
+              <span className="text-white">FRONT-END</span>{" "}
+              <span className="text-custom-orange">REACT</span>{" "}
+              <span className="text-white">DEVELOPER</span>
+            </h1>
+            <p className="text-gray-600 text-sm sm:text-xl leading-7">
+              {aboutMeText}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
