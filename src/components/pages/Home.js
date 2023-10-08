@@ -11,7 +11,7 @@ const Home = () => {
       strings: [
         "Hi, My Name is David Delgado. I am a Front-End Developer Out of  Miami, Florida.🌴",
       ],
-      typeSpeed: 60,
+      typeSpeed: 50,
       loop: false,
       showCursor: false,
     };

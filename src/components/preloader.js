@@ -23,8 +23,12 @@ const Preloader = () => {
   return (
     <div className={`preloader ${fadeIn ? 'fade-in' : ''} ${fadeOut ? 'fade-out' : ''}`}>
       <div className="preloader-content">
-        <div className="logo-container  ml-10">
-          <img className={`logo ${fadeIn ? 'swipe-in' : ''}`} src="./images/dd-logo.png" alt="Logo" />
+        <div className="logo-container ml-10">
+          <img
+            className={`logo ${fadeIn ? 'swipe-in' : ''} w-32 h-32`} // Set width and height to 32 pixels
+            src="./images/dd-logo.png"
+            alt="Logo"
+          />
         </div>
         <h1 className="text-home preloader-text flex items-center justify-center">
           <span className="text-home mr-2 animate-spin">&#9696;</span> Portfolio Loading...
@@ -35,3 +39,4 @@ const Preloader = () => {
 };
 
 export default Preloader;
+
