@@ -37,7 +37,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home bg-gradient-to-b from-custom-blue to-custom-bluee h-auto lg:flex lg:flex-col lg:w-full lg:h-screen">
+    <div className="home bg-gradient-to-b from-custom-blue to-custom-bluee h-auto lg:flex lg:flex-col lg:w-full lg:pt-12 ">
       <div className="container mx-auto px-8 p-10 sm:py-6">
         <div className="content flex-col text-center gap-14 h-auto">
           <div className="hero-main text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">

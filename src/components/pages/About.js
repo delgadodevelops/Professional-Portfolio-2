@@ -13,8 +13,8 @@ const aboutMeText = (
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-custom-bluee to-custom-blue min-h-screen flex flex-col items-center justify-center">
-      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 xl:p-10 xl:m-40 flex flex-col items-center">
+    <div className="bg-gradient-to-b from-custom-bluee to-custom-blue flex flex-col items-center justify-center">
+      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 xl:p-10 xl:m-80 flex flex-col items-center">
         <div className="flex flex-col lg:flex-row items-center">
           <img
             src="images/coding-img.png"
