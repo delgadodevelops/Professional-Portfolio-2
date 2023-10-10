@@ -30,23 +30,25 @@ const Skills = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-custom-blue to-custom-bluee flex flex-col items-center justify-center pt-5 pb-5">
+    <div className="bg-gradient-to-b from-custom-blue to-custom-bluee flex flex-col items-center justify-center pt-5 pb-5 min-h-screen">
       <div className="p-5 m-5">
-        <h2 className="text-home text-3xl text-center font-bold mb-8">
+        <h2 className="text-home text-3xl text-center font-bold mb-8 lg:text-5xl lg:mb-10">
           My Skills
         </h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-custom-blue p-6 rounded-lg shadow-md text-center text-white hover:bg-custom-orange hover:scale-110 hover:duration-700  "
+              className="bg-custom-blue p-6 rounded-lg shadow-md text-center text-white hover:bg-custom-orange hover:scale-110 hover:duration-700 flex flex-col justify-center items-center sm:w-52 sm:h-52 sm:text-lg lg:h-60 lg:w-60"
             >
               <img
                 src={skill.imageUrl}
                 alt={`Image for ${skill.name}`}
-                className="h-10 w-10 mx-auto mb-2"
+                className="h-10 w-10 mb-2 mx-auto sm:h-20 sm:w-20 sm:mb-7 lg:h-24 lg:w-24 lg:mb-8 "
               />
-              {skill.name}
+              <span className="text-lg md:text-xl lg:text-2xl">
+                {skill.name}
+              </span>
             </div>
           ))}
         </div>
