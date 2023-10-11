@@ -16,7 +16,7 @@ const About = () => {
       <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 md:p-16 md:m-16 xl:p-10 xl:m-80 flex flex-col items-center">
         <div className="flex flex-col lg:flex-row items-center lg:p-5">
           <img
-            src="images/coding-img.png"
+            src="images/coding-img-2.png"
             alt="Your Name"
             className="mb-4 w-64 h-56 sm:w-96 sm:h-80  xl:w-120 xl:h-108"
           />
