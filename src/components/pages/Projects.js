@@ -47,14 +47,14 @@ const Projects = () => {
           Here are some of the projects I've worked on. Click on any project to
           learn more or view the code.
         </h2>
-        <div className="">
+        <div className="flex flex-col items-center">
           {projectsData.map((project, index) => (
             <div
               key={index}
               className="project-card bg-custom-blue rounded-lg shadow-lg p-6 flex flex-col justify-between max-w-xs h-full mb-10 items-center"
             >
               <img
-                className="bg-custom-blue rounded h-96 object-contain mb-4"
+                className="bg-custom-blue rounded w-full mb-4"
                 src={project.image}
                 alt={project.title}
               />
