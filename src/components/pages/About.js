@@ -1,5 +1,4 @@
 import React from "react";
-import "../../index.css";
 
 const aboutMeText = (
   <p className="">
@@ -14,12 +13,12 @@ const aboutMeText = (
 const About = () => {
   return (
     <div className="bg-gradient-to-b from-custom-bluee to-custom-blue flex flex-col items-center justify-center">
-      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 xl:p-10 xl:m-80 flex flex-col items-center">
-        <div className="flex flex-col lg:flex-row items-center">
+      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 md:p-16 md:m-16 xl:p-10 xl:m-80 flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row items-center lg:p-5">
           <img
             src="images/coding-img.png"
             alt="Your Name"
-            className="mb-4 w-64 sm:w-96 xl:w-120"
+            className="mb-4 w-64 h-56 sm:w-96 sm:h-80  xl:w-120 xl:h-108"
           />
           <div className="text-center lg:text-left lg:pl-8">
             <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold italic mb-6">

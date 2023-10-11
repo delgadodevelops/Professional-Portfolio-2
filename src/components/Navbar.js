@@ -109,14 +109,19 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex space-x-14">
         {/* Desktop Menu */}
-        <Link to="about" smooth={true} duration={500} className="text-nav mt-2">
+        <Link
+          to="about"
+          smooth={true}
+          duration={500}
+          className="hover:cursor-pointer text-nav mt-2"
+        >
           About
         </Link>
         <Link
           to="skills"
           smooth={true}
           duration={500}
-          className="text-nav mt-2"
+          className="hover:cursor-pointer text-nav mt-2"
         >
           Skills
         </Link>
@@ -124,7 +129,7 @@ const Navbar = () => {
           to="projects"
           smooth={true}
           duration={500}
-          className="text-nav mt-2"
+          className="hover:cursor-pointer text-nav mt-2"
         >
           Projects
         </Link>
@@ -132,7 +137,7 @@ const Navbar = () => {
           to="contact"
           smooth={true}
           duration={500}
-          className="text-nav mt-2"
+          className="hover:cursor-pointer text-nav mt-2"
         >
           Contact
         </Link>

@@ -11,7 +11,7 @@ const Home = () => {
       strings: [
         "Hi, My Name is David Delgado. I am a Front-End Developer Out of  Miami, Florida.🌴",
       ],
-      typeSpeed: 50,
+      typeSpeed: 40,
       loop: false,
       showCursor: false,
     };
@@ -37,23 +37,23 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home bg-gradient-to-b from-custom-blue to-custom-bluee h-auto lg:flex lg:flex-col lg:w-full lg:pt-12 ">
+    <div className="home bg-gradient-to-b from-custom-blue to-custom-bluee h-auto lg:flex lg:flex-col lg:w-full lg:py-20">
       <div className="container mx-auto px-8 p-10 sm:py-6">
         <div className="content flex-col text-center gap-14 h-auto">
-          <div className="hero-main text-center h-auto gap-6 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
-            <div className="hero-img h-80 w-80 sm:h-108 sm:w-108 xl:h-120 xl:w-120 sm:relative mx-auto text-center">
+          <div className="hero-main text-center h-auto gap-4 lg:flex lg:justify-center lg:items-center lg:gap-20 lg:relative">
+            <div className="hero-img h-80 w-80 sm:h-108 sm:w-108 xl:h-120 xl:w-120  sm:relative mx-auto  text-center">
               <img
                 className=""
                 src="/images/portfolio-photo-updated.png"
                 alt="Portrait"
               />
             </div>
-            <div className="hero-text flex flex-col max-w-screen-md relative">
-              <h1 className="text-4xl sm:text-5xl xl:text-7xl lg:leading-11 mb-5 mt-5 font-semibold text-custom-orange">
+            <div className="hero-text flex flex-col max-w-screen-md relative xl:py-15">
+              <h1 className="text-4xl sm:text-5xl xl:text-7xl lg:leading-11 mb-5 mt-5 md:mt-6 font-semibold text-custom-orange">
                 Front-End React Developer
               </h1>
               <p
-                className="text-xl sm:text-2xl xl:text-3xl font-light leading-8 mb-5 text-white"
+                className="text-xl sm:text-2xl xl:text-3xl font-light leading-8 mb-5 md:px-10 text-white"
                 ref={textRef}
               ></p>
               <span className="flex justify-center gap-4 mb-8 mt-4">

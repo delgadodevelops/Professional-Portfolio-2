@@ -30,12 +30,12 @@ const Skills = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-custom-blue to-custom-bluee flex flex-col items-center justify-center pt-5 pb-5 min-h-screen">
+    <div className="bg-gradient-to-b from-custom-blue to-custom-bluee flex flex-col items-center justify-center py-5">
       <div className="p-5 m-5">
-        <h2 className="text-home text-3xl text-center font-bold mb-8 lg:text-5xl lg:mb-10">
+        <h1 className="text-home text-3xl text-center font-bold mb-8 md:text-4xl lg:text-5xl lg:mb-14">
           My Skills
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10">
+        </h1>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-16">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -46,7 +46,7 @@ const Skills = () => {
                 alt={`Image for ${skill.name}`}
                 className="h-10 w-10 mb-2 mx-auto sm:h-20 sm:w-20 sm:mb-7 lg:h-24 lg:w-24 lg:mb-8 "
               />
-              <span className="text-lg md:text-xl lg:text-2xl">
+              <span className="text-gray-600 text-lg md:text-xl lg:text-2xl">
                 {skill.name}
               </span>
             </div>
