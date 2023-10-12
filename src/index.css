@@ -5,31 +5,12 @@
 
 * {
   font-family: "Kanit", sans-serif;
-  
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-div {
-  display: block;
-}
-
 /* NAVBAR */
-
-.underline-animation {
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: #ffb600;
-  transition: width 0.5s ease-in-out;
-}
-
-.relative:hover .underline-animation {
-  width: 100%;
-}
 
 .text-nav {
   color: #fff;
@@ -39,33 +20,4 @@ div {
 
 .text-nav:hover {
   color: #ffb600;
-}
-
-/* home page  */
-
-.text-home {
-  color: #ffb600;
-}
-
-/* About me */
-
-.custom-container {
-  max-width: 800px;
-  /* Adjust the value as per your preference */
-}
-
-@keyframes load-progress {
-  0% {
-    width: 0%;
-  }
-}
-
-.animate-progress {
-  animation: load-progress 2s ease-in-out forwards;
-}
-
-/* About.js */
-
-.background-image {
-  background-image: url(../public/images/bg-half.png);
 }

@@ -40,7 +40,7 @@ const Projects = () => {
   return (
     <div className="bg-gradient-to-b from-custom-bluee to-custom-blue flex flex-col justify-center items-center py-5 min-h-screen">
       <div className="p-5 m-5">
-        <h1 className="text-home text-center text-3xl font-bold mb-2">
+        <h1 className="text-custom-orange text-center text-3xl font-bold mb-2">
           Portfolio
         </h1>
         <h2 className="mb-8 text-center text-white">

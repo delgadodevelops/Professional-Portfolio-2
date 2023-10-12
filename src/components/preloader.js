@@ -34,9 +34,9 @@ const Preloader = () => {
             alt="Logo"
           />
         </div>
-        <h1 className="text-home preloader-text flex items-center justify-center">
-          <span className="text-home mr-2 animate-spin">&#9696;</span> Portfolio
-          Loading ...
+        <h1 className=" text-custom-orange flex items-center justify-center">
+          <span className=" mr-2 animate-spin text-custom-orange">&#9696;</span>{" "}
+          Portfolio Loading ...
         </h1>
       </div>
     </div>

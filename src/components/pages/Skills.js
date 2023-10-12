@@ -32,7 +32,7 @@ const Skills = () => {
   return (
     <div className="bg-gradient-to-b from-custom-blue to-custom-bluee flex flex-col items-center justify-center py-5">
       <div className="p-5 m-5">
-        <h1 className="text-home text-3xl text-center font-bold mb-2 md:text-4xl lg:text-5xl lg:mb-6">
+        <h1 className="text-custom-orange text-3xl text-center font-bold mb-2 md:text-4xl lg:text-5xl lg:mb-6">
           My Skills
         </h1>
         <h2 className="text-center text-white mb-8 md:text-xl lg:text-2xl lg:mb-12  ">

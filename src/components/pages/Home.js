@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import "../../index.css";
 
 const Home = () => {
   const textRef = useRef(null);
