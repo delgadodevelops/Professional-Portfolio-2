@@ -10,6 +10,7 @@ module.exports = {
       width: {
         108: "27rem",
         120: "30rem",
+        144: "36rem",
       },
       colors: {
         "custom-orange": "#ffb600",
