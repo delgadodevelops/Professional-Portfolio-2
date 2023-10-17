@@ -32,10 +32,10 @@ const Skills = () => {
   return (
     <div className="bg-gradient-to-b from-custom-blue to-custom-bluee flex flex-col items-center justify-center py-5">
       <div className="p-5 m-5">
-        <h1 className="text-custom-orange text-3xl text-center font-bold mb-2 md:text-4xl lg:text-5xl lg:mb-6">
+        <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-custom-orange">
           My Skills
         </h1>
-        <h2 className="text-center text-white mb-8 md:text-xl lg:text-2xl lg:mb-12  ">
+        <h2 className="mb-8 lg:mb-16 font-light text-center text-white sm:text-xl">
           I have a wide range of experience in the following skills, but I am
           always looking to learn more!
         </h2>
