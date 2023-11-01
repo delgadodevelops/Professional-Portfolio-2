@@ -95,8 +95,8 @@ const Navbar = () => {
                 </Link>
                 {isMobile && (
                   <a
-                    href="/path/to/resume.pdf"
-                    download="resume.pdf"
+                    href="./images/DAVID DELGADO RESUME 2023.pdf"
+                    download="DAVID DELGADO RESUME 2023.pdf"
                     className="block px-4 py-2 text-nav border border-custom-orange rounded-lg hover:bg-custom-orange hover:text-white"
                   >
                     Download Resume
