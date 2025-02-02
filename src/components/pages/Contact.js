@@ -28,7 +28,19 @@ const Contact = () => {
         subject: subject,
         message: message,
       };
+    
+    try{
+      const templateParams ={
+        user_id:"user_9O5
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message, 
+      };
 
+
+    }  
+    
       const response = await emailjs.send(
         "service_iyf7d3r",
         "template_7p2deo2",

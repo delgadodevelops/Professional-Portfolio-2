@@ -34,6 +34,22 @@ const projectsData = [
     link: "https://github.com/delgadodevelops/Team-Profile-Generator",
     github: "https://github.com/delgadodevelops/Team-Profile-Generator",
   },
+  {
+    title: "Foam Experts detailing",
+    image: "./images/team-profile-generator.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus felis ut feugiat aliquam.",
+    link: "https://github.com/delgadodevelops/Team-Profile-Generator",
+    github: "https://github.com/delgadodevelops/Team-Profile-Generator",
+  },
+  {
+    title: "Foam Experts detailing",
+    image: "./images/foam-experts-detailing.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus felis ut feugiat aliquam.",
+    link: "https://github.com/delgadodevelops/Team-Profile-Generator",
+    github: "https://github.com/delgadodevelops/Team-Profile-Generator",
+  },
 ];
 
 const Projects = () => {
@@ -44,19 +60,18 @@ const Projects = () => {
           Portfolio
         </h1>
         <h2 className="mb-8 lg:mb-16 font-light text-center text-white sm:text-xl">
-          Here are some of the projects I've worked on. Click on any project to
-          learn more or view the code.
+          Check out some of my projects down below
         </h2>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project, index) => (
               <div
                 key={index}
-                className="max-w-sm rounded-lg shadow-lg bg-custom-blue"
+                className="max-w-sm rounded-3xl shadow-lg hover:scale-105 duration-500 bg-custom-blue"
               >
                 <a href={project.link}>
                   <img
-                    className="rounded-t-lg"
+                    className="rounded-t-3xl"
                     src={project.image}
                     alt={project.title}
                   />

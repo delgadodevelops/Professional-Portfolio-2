@@ -1,5 +1,6 @@
-import React from "react";
+// Import React and CSS here
 
+// Define aboutMeText outside the component if it doesn't change
 const aboutMeText = (
   <p className="">
     As a Junior Front-End Developer, I excel in HTML, CSS, JavaScript, React,
@@ -10,15 +11,20 @@ const aboutMeText = (
   </p>
 );
 
+// Define your About component
 const About = () => {
   return (
     <div className="bg-gradient-to-b from-custom-bluee to-custom-blue flex flex-col items-center justify-center">
-      <div className="bg-custom-blue rounded-lg shadow-lg p-8 m-8 md:p-16 md:m-16 xl:p-10 xl:m-80 flex flex-col items-center">
+      <div className="bg-custom-blue rounded-2xl shadow-lg p-8 m-8 md:py-16 md:m-16 xl:py-10 xl:m-80 flex flex-col items-center">
         <div className="flex flex-col lg:flex-row items-center lg:p-5">
           <img
             src="images/coding-img-2.png"
-            alt="Your Name"
-            className="mb-4 w-64 h-56 sm:w-96 sm:h-80  xl:w-120 xl:h-108"
+            alt="Coding Image"
+            className="mb-4 w-64 h-56 sm:w-96 sm:h-80 xl:w-120 xl:h-108"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "fallback-image.png";
+            }}
           />
           <div className="text-center lg:text-left lg:pl-8">
             <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold italic mb-6">

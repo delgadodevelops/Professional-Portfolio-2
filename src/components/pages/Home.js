@@ -1,39 +1,20 @@
-import React, { useEffect, useRef } from "react";
-import Typed from "typed.js";
+import React, { useEffect, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
-  const textRef = useRef(null);
-  const cursorRef = useRef(null);
+  const [text, setText] = useState("");
 
   useEffect(() => {
-    const options = {
-      strings: [
-        "Hi, My Name is David Delgado. I am a Front-End Developer Out of  Miami, Florida.🌴",
-      ],
-      typeSpeed: 40,
-      loop: false,
-      showCursor: false,
-    };
+    const timer = setTimeout(() => {
+      setText(true);
+    }, 3000);
 
-    const typed = new Typed(textRef.current, options);
-
-    const cursorElement = document.querySelector(".typed-cursor");
-    cursorRef.current = cursorElement;
-
-    return () => {
-      typed.destroy();
-    };
+    return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const cursorElement = cursorRef.current;
-    const textElement = textRef.current;
-
-    if (cursorElement && textElement) {
-      const textRect = textElement.getBoundingClientRect();
-      cursorElement.style.transform = `translateY(${textRect.height}px)`;
-    }
-  }, []);
+  const message = [
+    "Hi, My Name is David Delgado. I am a Front-End Developer Out of  Miami, Florida.🌴",
+  ];
 
   return (
     <div className="home bg-gradient-to-b from-custom-blue to-custom-bluee h-auto lg:flex lg:flex-col lg:w-full lg:py-20">
@@ -51,10 +32,15 @@ const Home = () => {
               <h1 className="text-4xl sm:text-5xl xl:text-7xl lg:leading-11 mb-5 mt-5 md:mt-6 font-semibold text-custom-orange">
                 Front-End React Developer
               </h1>
-              <p
-                className="text-xl sm:text-2xl xl:text-3xl font-light leading-8 mb-5 md:px-10 text-white"
-                ref={textRef}
-              ></p>
+              <p className="text-xl sm:text-2xl xl:text-3xl font-light leading-8 mb-5 md:px-10 text-white">
+                <Typewriter
+                  words={message}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={100}
+                  delaySpeed={1000}
+                ></Typewriter>
+              </p>
               <span className="flex justify-center gap-4 mb-8 mt-4">
                 <a
                   href="https://github.com/delgadodevelops"
